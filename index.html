@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
-  <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+        <style>
+    *{
+        box-sizing: border-box;
+    }
     body{
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0px;
-      background-color: #313131;
-      flex-direction: column;
-      gap: 24px;
-      width: 100%;
-      padding: 24px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        background-color: #313131;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        padding: 24px;
     }
     .glslCanvas{
-      max-width: 90%;
-      flex-grow: 1;
-      flex-basis: 0;
+        max-width: 90%;
+        flex-grow: 1;
+        flex-basis: 0;
     }
     /* .glslCanvas2{
-      flex-grow: 1;
+       flex-grow: 1;
     } */
     .duo{
-      display: flex;
-      gap: 24px;
-      width: 90%;
+        display: flex;
+        gap: 24px;
+        width: 90%;
     }
-  </style>
-</head>
-<body>
-  <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="first.frag" width="500" height="500"></canvas>
-  <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="second.frag" width="500" height="500"></canvas>
-  <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="third.frag" width="500" height="500"></canvas>
-  <div class="duo">
-    <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="fourth.frag" width="500" height="500"></canvas>
-    <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="fifth.frag" width="500" height="500"></canvas>
-  </div>
-  <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="sixth.frag" width="500" height="500"></canvas>
-  <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="seventh.frag" width="500" height="500"></canvas>
-  <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="eighth.frag" width="500" height="500"></canvas>
-</body>
+        </style>
+    </head>
+    <body>
+        <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="first.frag" width="500" height="500"></canvas>
+        <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="second.frag" width="500" height="500"></canvas>
+        <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="third.frag" width="500" height="500"></canvas>
+        <div class="duo">
+            <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="fourth.frag" width="500" height="500"></canvas>
+            <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="fifth.frag" width="500" height="500"></canvas>
+        </div>
+        <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="sixth.frag" width="500" height="500"></canvas>
+        <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="seventh.frag" width="500" height="500"></canvas>
+        <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="eighth.frag" width="500" height="500"></canvas>
+        <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="ninth.frag" width="500" height="500"></canvas>
+        <canvas style="border: 1px solid;" class="glslCanvas" data-fragment-url="tenth.frag" width="500" height="500"></canvas>
+    </body>
 </html>
