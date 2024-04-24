@@ -48,12 +48,13 @@ float rect(vec2 p, vec2 c, vec2 size){
 
 void main() {
     vec2 p = gl_FragCoord.xy / u_resolution;
+    p.x *= u_resolution.x/u_resolution.y;
 
     p *= 50.;
 
     
 
-    p.x += step(1. , mod(p.y, 2.)) * .25 + u_time * 10. * random(vec2(ceil(p.y), ceil(p.y))) * (mod(ceil(p.y), 2.) == 0. ? -1. : 1.);
+    p.x += step(1. , mod(p.y, 2.)) * .25 + u_time * .1 * u_mouse.x * random(vec2(ceil(p.y), ceil(p.y))) * (mod(ceil(p.y), 2.) == 0. ? -1. : 1.);
 
     vec2 s = ceil(p);
 
@@ -61,7 +62,7 @@ void main() {
 
     
     
-    vec3 color = vec3(rect(p, vec2(.5), vec2(step(.4, noise(s)),.7)));
+    vec3 color = vec3(1.- rect(p, vec2(.5), vec2(step(.4, noise(s)),.7)));
 
     gl_FragColor = vec4(color, 1.);
 }
