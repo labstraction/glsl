@@ -14,4 +14,4 @@ void main(){
   color += step(.5 + cos(st.y * PI) * sin(u_time), st.x);
   
   gl_FragColor=vec4(color,1.);
-}
+}         

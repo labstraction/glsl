@@ -20,9 +20,9 @@ void main() {
 
   vec3 color = vec3(abs(f), f, f);
 
-  color *= smoothstep(0., y - tiles * 5. / 8., -sin((x / 0.2 / tiles) - u_time) * (.015 / tilewidth) * cos(u_time / 5.)) * 2. - 1.;
+  color *= smoothstep(0., y - tiles * 6. / 8., -sin((x / 0.2 / tiles) - u_time) * (.015 / tilewidth) * cos(u_time / 6.)) * 3. - 1.;
 
-  color *= smoothstep(0., y - tiles * 3. / 8., -sin((x / 0.2 / tiles) - u_time) * (.015 / tilewidth) * cos(u_time / 5.)) * 2. - 1.;
+  color *= smoothstep(0., y - tiles * 2. / 8., -sin((x / 0.2 / tiles) - u_time) * (.015 / tilewidth) * cos(u_time / 6.)) * 3. - 1.;
 
   gl_FragColor = vec4(color, 1.);
 
