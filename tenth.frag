@@ -62,7 +62,7 @@ void main() {
 
     
     
-    vec3 color = vec3(1.- rect(p, vec2(.5), vec2(step(.4, noise(s)),.7)));
+    vec3 color = vec3(1. - rect(p, vec2(.5), vec2(step(.4, noise(s)),.7)));
 
     gl_FragColor = vec4(color, 1.);
 }
