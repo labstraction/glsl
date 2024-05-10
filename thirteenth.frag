@@ -60,7 +60,7 @@ void main() {
 
 
 
-
+    vec3 color = vec3(1.) * rect(p, vec2(.5), vec2(.95));
     
 
    
