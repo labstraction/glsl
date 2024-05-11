@@ -50,7 +50,7 @@ void main() {
     vec2 p = gl_FragCoord.xy / u_resolution;
     p.x *= u_resolution.x/u_resolution.y;
 
-    p *= 200.;
+    p *= 100.;
 
     
 
