@@ -50,7 +50,7 @@ void main() {
     vec2 p = gl_FragCoord.xy / u_resolution;
     p.x *= u_resolution.x/u_resolution.y;
 
-    p *= 50.;
+    p *= 100.;
 
     
 
@@ -60,7 +60,7 @@ void main() {
 
     p=fract(p);
     
-    vec3 color = vec3(1.- rect(p, vec2(.5), vec2(step(u_mouse.y/u_resolution.y, noise(s)),.7)));
+    vec3 color = vec3(0.+ rect(p, vec2(.5), vec2(step(u_mouse.y/u_resolution.y, noise(s)),.7)));
 
     gl_FragColor = vec4(color, 1.);
 }

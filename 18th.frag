@@ -25,23 +25,23 @@ float random (in vec2 st) {
 void main() {
     vec2 st = gl_FragCoord.xy / u_resolution;
 
-    st*=5.;
+    st*=4.;
 
     vec2 tile = floor(st);
 
+    st.y = st.y + u_time/10. * (mod(tile.x, 2.) == 0. ? 1. : -1.);
+
     vec2 point = fract(st);
 
-    point.y = point.y + u_time/10. * (mod(tile.x, 2.) == 0. ? 1. : -1.);
-
+  
     point*=4.;
-
-    vec2 newpoint = fract(point);
-
-    
 
     vec2 innertile = floor(point);
 
-    newpoint.x = newpoint.x + u_time/10. * (mod(innertile.y, 2.) == 0. ? 1. : -1.);
+    point.x = point.x + u_time/1. * (mod(innertile.y, 2.) == 0. ? 1. : -1.);
+
+    vec2 newpoint = fract(point);
+
 
     vec3 color = vec3(1) * rect(newpoint, vec2(.5), vec2(.5));
 

@@ -25,7 +25,7 @@ float random (in vec2 st) {
 void main() {
     vec2 st = gl_FragCoord.xy / u_resolution;
 
-    st*=70.;
+    st*=40.;
 
     vec2 tile = floor(st);
 
